@@ -1,0 +1,127 @@
+:root{
+    --hue-neutral : 185;
+    --hue-wrong :0;
+    --hue-correct: 145;
+}
+
+body{
+    --hue: var(--hue-neutral);
+    padding: 50;
+    margin: 250;
+    display: flex;
+    width: 100vw;
+    height: 100vw;
+    justify-content: center;
+    background-color: hsl(var(--hue), 100%, 30%);
+    /* font-style: bold; */
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: medium;
+  
+}
+body.correct{
+    --hue : var(var(--hue-correct));
+    background-color: hsl(var(--hue-correct), 100%, 20%);
+}
+
+body.wrong {
+    --hue : var(var(--hue-wrong));
+    background-color: hsl(var(--hue-wrong), 100%, 20%);
+}
+.container{
+    /* width: 200rem;
+    max-width: 80%; 
+    height:40%;
+    max-height: 80%; */
+    /* background-color: white; */
+    background-color: var(--hue-neutral);
+    border-radius: 5px;
+    padding: 5%;
+    /* box-shadow: 0 0 10px 2px; */
+    width: 70%;
+    height: 90%;
+    align-items: center;
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 40px;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+.btn{
+    --hue : var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    width: 80%;
+    height: 88%;
+    align-items: center;
+    justify-self: center;
+    padding: 20px 20px;
+    border-radius: 25px;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: medium;
+  
+}
+.btn:hover{
+    border-color: var(--hue-neutral - 25);
+    cursor: pointer;
+    border-width: 2px;
+}
+
+.btn.correct{
+    --hue: var(--hue-correct);
+    color: black;
+}
+
+.btn.wrong{
+    --hue: var(--hue-wrong);
+}
+
+.start-btn, 
+.next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.hide{
+    display: none;
+}
+
+.score{
+    display: flex;
+    text-align-last: auto;
+    position: relative;
+    right: 5%;
+
+}
+
+
+/* 
+#progressBar{
+    width: 28rem;
+    height: 3rem;
+    border:var(--hue-neutral);
+    overflow: hidden;
+    margin-top: 2rem;
+    border-radius: 50px;
+}
+
+#progressBarFull{
+    height: 100%;
+    background-color: white;
+    width: 0%;
+} */
+
